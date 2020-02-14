@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<link rel="stylesheet" type="text/css" href="toggle.css">
+	<script type="text/javascript" src="price.js"></script>
+</head>
+<body>
+
+	<div id="pricediv">
+		<div id="constantprice">
+			<p>Sum: <br></p>
+			<p id="price">100</p><p>$<br>
+			Breakdown:<br></p>
+			<p>100$ Base</p><br>
+		</div>
+		<div class="greytext">
+			<p class="bonusprice greytext">+1$ Option 1</p><br>
+			<p class="bonusprice">+10$ Option 2</p><br>
+			<p class="bonusprice">+100$ Option 3</p><br>
+			<p class="bonusprice">+1000$ Option 4</p>
+		</div>
+	</div>
+	</div>
+
+	<div id="toggles">
+		<label class="switch" id="topleft">
+			<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+			<span class="slider"></span>
+			<p>+1$</p>
+		</label>
+
+		<label class="switch" id="topright">
+			<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+			<span class="slider"></span>
+			<p>+10$</p>
+		</label><br><br>
+
+		<label class="switch" id="bottomleft">
+			<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+			<span class="slider round"></span>
+			<p>+100$</p>
+		</label>
+
+		<label class="switch" id="bottomright">
+			<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+			<span class="slider round"></span>
+			<p>+1000$</p>
+		</label>
+	</div>
+</body>
+</html> 

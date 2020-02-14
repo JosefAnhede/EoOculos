@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Design</title>
+	<link rel="stylesheet" type="text/css" href="../css/shared.css">
+	<link rel="stylesheet" type="text/css" href="../css/design.css">
+	<script src="../scripts/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="../scripts/price.js"></script>
+	<link rel="icon" href="../media/EO.ico"/>
+	<script type="text/javascript" src="../scripts/modalScript.js"></script>
+	<script type="text/javascript" src="../scripts/purchase.js"></script>
+	<script type="text/javascript" src="../scripts/headerSpace.js"></script>
+</head>
+<body>
+
+	<a href="../index.html"><div id="header" class="stickyHeader">
+		<img src="../media/EOVit2400ppi.png" id="oculos" alt="Eo Oculos">
+		<a href="https://www.instagram.com/eooculos/">
+			<img src="../media/IGVit.png" id="igicon" class="socialmediaicons" alt="Instagram">
+		</a>
+		<a href="https://twitter.com/tylerthecreator">
+			<img src="../media/TwitterWhite.png" id="twittericon" class="socialmediaicons" alt="Twitter">
+		</a>
+	</div></a>
+
+	<div id="headerSpace"></div>
+
+	<div id="pricediv">
+		<div id="constantprice">
+			<h2>Sum: <br></h2>
+			<p id="price">35000</p><p>$<br><br></p>
+			<h2>Breakdown:<br></h2>
+			<p class="greytext">+35000$ Oculos base</p>
+		</div>
+		<div class="greytext">
+			<p class="bonusprice">-7000$ Face Recognition<br></p>
+			<p class="bonusprice">-12000$ Ad-program<br></p>
+			<p class="bonusprice">-8000$ Microphone<br></p>
+			<p class="bonusprice">-8000$ Year-program</p>
+		</div>
+	</div>
+
+	<div id="options">
+		<div class="option" id="option1">
+			<h2 class="optionHeader">Face Recognition</h2>
+			<p>If you opt in to our Face Recognition your Oculos will be able to compare to faces of people you meet and compare them to our extensive online database to find out their names, occupation and adress. If you're so inclined, then you can even buy addons for accessing even more information such as sexual orientation, relationship status, prescriptions and much more. New profiles will be created for anyone you encounter that isn't already in our database. This addon provides a discount of 7000$</p>
+			<label class="switch" id="label1">
+				<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+				<span class="slider"></span>
+				<p>-7000$</p>
+			</label>
+		</div>
+		<div class="option" id="option2">
+			<h2 class="optionHeader">Ad-program</h2>
+			<p>By agreeing to partake in our Ad-program you give your Oculos the ability to play ads in your peripheral vision at a price discount of 12000$!</p>
+			<label class="switch" id="label2">
+				<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+				<span class="slider"></span>
+				<p>-12000$</p>
+			</label>
+		</div>
+		<div class="option" id="option3">
+			<h2 class="optionHeader">Microphone</h2>
+			<p>To provide an even more detailed MemoryBank we can record all sounds with a discreet omnidirectional microphone. The data will be sent and stored on our cloud. The best part? It comes with a price reduction of 8000$ on you Oculos</p>
+			<label class="switch" id="label3">
+				<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+				<span class="slider round"></span>
+				<p>-8000$</p>
+			</label>
+		</div>
+		<div class="option" id="option4">
+			<h2 class="optionHeader">Year-program</h2>
+			<p>
+			Our team at Oculos Inc. are constantly striving to provide both a better product and overall experience from the moment it arrives by your doorstep. To ensure maximal consumer satisfaction we need both the persistence of our hardworking engineers as well as usage data from our consumers. By signing a contract to join our brand new <em>Oculos Year-program</em> you agree to use your Oculos at least 350 days in the timeframe of a year for at least three consecutive years. By doing this the price of your oculos is reduced by a whole 8000$!</p>
+			<label class="switch" id="label4">
+				<input type="checkbox" class="pricecheck" onclick="updatePrice();">
+				<span class="slider round"></span>
+				<p>-8000$</p>
+			</label>
+		</div>
+	</div>
+
+	<button id="order">
+		<div id="pDiv">
+			<p>Order</p>	
+		</div>
+	</button>
+
+<div id="modal">
+<!-- Modal content -->
+	<div class="modal-content">
+	  <div class="modal-header">
+	    <span class="close">&times;</span>
+	  </div>
+	  <div class="modal-body">
+	    <p>By confirming and completing your order you agree to the three essential clauses forced by Oculos Inc. These clauses are as follows. <br>
+	    	<br>
+	    1. All data collected by your Oculos or by any other means obtained by Oculos Inc. are property of Oculos Inc. only. This information is used for whatever purpose we see fit and we're by no means forced to disclose any ways in which we use this data. <br>
+	    	<br>
+	    2. Your Oculos is personal and should only be used by it's owner. The owner is defined as soon as the Oculos is worn and started. A personal-id will be created in that moment and from then on the Oculos owners can't be changed.<br>
+	    <br>
+	    3. Any opposition to these rules will result in immediate legal action and publication of whichever data from your Oculos we see fit. <br>
+	    <br>
+		If you oppose to any of these rules then refrain from purchasing or using an Oculos.</p>
+	  </div>
+	  <button class="buttonBW" onclick="purchase();">
+	    <h3>Complete Order</h3>
+	  </button>
+	</div>
+</div>
+</body>
+</html>

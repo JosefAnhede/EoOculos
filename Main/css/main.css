@@ -1,0 +1,376 @@
+
+
+/*Defaults*/
+	html{
+		scroll-behavior: smooth;
+	}
+
+.fade-out
+{
+	opacity: 0;
+	transition: none;
+}
+#hiddenWrapper
+{
+	transition: opacity 1s linear;
+}
+#footer
+{
+	width: 100%;
+	height: 10vh;
+	background-color: #202020;
+}
+
+/*Top Screen*/
+	/*Chin*/
+	/*Slides*/
+		/*Nav Button*/
+			.navButton
+			{
+				position: absolute;
+				top: 50%;
+				height: 6vh;
+				z-index: 2;
+				cursor: pointer;
+			}
+			#leftNavButton
+			{
+				right: 2vh;
+				animation-name: RightSlideArrowHover;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-timing-function: cubic-bezier(.5,0,.5,1);
+			}
+			#rightNavButton
+			{
+				transform: scaleX(-1);
+				left: 2vh;
+				animation-name: LeftSlideArrowHover;
+				animation-duration: 4s;
+				animation-iteration-count: infinite;
+				animation-timing-function: cubic-bezier(.5,0,.5,1);
+			}
+		/*Paragraphs*/
+			.slideParagraph > h1,h2,h3,h4,h5,h6,p
+			{
+				margin: 0;
+				padding: 0;
+				color: #585858;
+			}
+			.slideParagraph h2
+			{
+				font-size: 5vh;
+				font-family: giveny;
+				font-weight: 400;
+			}
+			#presentation
+			{
+				color: #AE6161;
+			}
+			#concealment
+			{
+				color: #5F81B0;
+			}
+			.slideParagraph p
+			{
+				font-size: 3.4vh;
+				font-family: titilliumXLI;
+			}
+			.slideParagraph
+			{
+				top: 50%;
+				position: relative;
+				text-align: left;
+				width: 33vw;
+			}
+			#leftSlideParagraph
+			{
+				left: 88%;
+				transform: translate3d(-100%,-50%,0);
+			}
+			#rightSlideParagraph
+			{
+				left: 12%;
+				transform: translate3d(0,-50%,0);
+			}
+		/*Pictures*/
+			#page2
+			{
+				background: url(../media/OgaWideBlue.png) no-repeat right top; 
+				background-size: cover;
+			}
+			#page1
+			{
+				background: url(../media/OgaWideRed.png) no-repeat left top; 
+				background-size: cover;
+			}
+	#scrollArrow
+	{
+		height: 6vh;
+		position: absolute;
+		transform: translateX(-50%) rotate(90deg);
+		bottom: 2vh;
+		left: 50%;
+		z-index: 2;
+		cursor: pointer;
+
+		animation-name: scrollArrowHover;
+		animation-duration: 4s;
+		animation-iteration-count: infinite;
+		animation-timing-function: cubic-bezier(.5,0,.5,1);
+	}
+
+	#pagecontainer
+	{
+		width: 100%;
+		height: 88vh;
+	}
+	.page
+	{
+		width: 100%;
+		height: 88vh;
+
+		position: absolute;
+		transition: left 900ms cubic-bezier(0.6, 0, 0.4, 1),
+					opacity 450ms linear;
+		overflow-y: hidden;
+	}
+	#page1
+	{
+		left: 0;
+	}
+	#page2
+	{
+		left: 100%;
+	}
+
+/*Second Screen*/
+	#secondPageContainer
+	{
+		position: relative;
+		background-color: #202020;
+		height: 88vh;
+		width: 100%;
+	}
+	#secondPageContainer button
+	{
+		position: absolute;
+		transform: translate3d(-50%,-50%, 0);
+		left: 50%;
+		top: 50%;
+		outline: none;
+		font-size: 40px;
+		font-family: giveny;
+		transition: width 0.8s ease-in-out,
+					height 0.8s ease-in-out,
+					background-color 0.8s ease-in-out,
+					font-size 0.8s ease-in-out,
+					box-shadow 0.8s ease-in-out;
+	}
+	.designButtonIdle
+	{
+		transform: none;
+		background-color: #202020;
+		height: 10vh;
+		/*width: 18vh;*/
+		width: 15em;
+		box-shadow: none;
+	}
+	.designButtonHover
+	{
+		background-color: #eeeeee;
+		height: 80%;
+		width: 100%;
+		-webkit-box-shadow: 0px -2px 22px 0px rgba(255,255,255,0.5);
+		-moz-box-shadow: 0px -2px 22px 0px rgba(255,255,255,255.5);
+		box-shadow: 0px -2px 22px 0px rgba(255,255,255,0.5);
+	}
+	.block
+	{
+		background-color: #202020;
+		width: 50%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		/*-webkit-box-shadow: 0px -8px 22px 0px rgba(0,0,0,0.5);
+        -moz-box-shadow: 0px -8px 22px 0px rgba(0,0,0,0.5);
+		box-shadow: 0px -8px 22px 0px rgba(0,0,0,0.5);*/
+		transition: transform 0.8s ease-in-out;
+
+	}
+	.block img
+	{
+		position: absolute;
+		height: 90px;
+		top: 50%;
+		transform: translateY(-50%);
+	}
+	#leftBlock img
+	{
+		right: 0;
+	}
+	#leftBlock
+	{
+		left: 0;
+	}
+	#rightBlock
+	{
+		right: 0;
+	}
+
+/*Third Screen*/
+	/*Thirdsplits*/
+		.split
+		{
+			position: relative;
+			height: 100%;
+			display: inline-block;
+			box-sizing: border-box;
+		}
+		.split h1
+		{
+			margin: 0;
+			position: absolute;
+			font-size: 26px;
+			font-family: coldiac;
+			color: #202020;
+		}
+		.split p
+		{
+			margin: 0;
+			position: absolute;
+			letter-spacing: 0.5px;
+			font-size: 15px;
+			line-height: 1.4em;
+			font-family: titilliumL;
+		}
+		/*3*/
+			#thirdsplitsContainer
+			{
+				background-color: #EEEEEE;
+				height: 80vh;
+				width: 100%;
+			}
+			/*Classes and elements*/
+				.thirdsplit
+				{
+					width: 33.333%;
+					border-bottom: 2px solid #202020;
+				}
+				.thirdsplit h1
+				{
+					top: 10%;
+					left: 50%;
+					transform: translate3d(-50%,-100%,0);
+				}
+				.thirdsplit p
+				{	
+					top: 12%;
+					width: 80%;
+					left: 10%;
+				}
+
+				.thirdsplit img
+				{
+					position: absolute;
+					bottom: 15%;
+					left: 50%;
+					transform: translate3d(-50%,0,0);
+					height: 15%;
+				}
+			/*Splits*/
+				#thirdsplit1
+				{
+					border-left: 2px solid #202020;
+				}
+				#thirdsplit2
+				{
+					border-left: 2px solid #202020;
+					border-right: 2px solid #202020;
+				}
+				#thirdsplit3
+				{
+					border-right: 2px solid #202020;
+				}
+
+		/*2*/
+			#twothirdsplitsContainer
+			{
+				height: 100vh;
+				width: 100%;
+				background-color: #EEEEEE;
+			}
+			#twothirdsplitsContainerOne
+			{
+				width: 66.666%;
+				border-left: 2px solid #202020;
+				border-right: 2px solid #202020;
+			}
+			#twothirdsplitsContainerOne h1
+			{
+				top: 7%;
+				right: 25%;
+				transform: translate3d(50%,-50%,0);
+			}
+			#twothirdsplitsContainerOne p
+			{
+				top: 12%;
+				right: 5%;
+				width: 40%;
+			}
+			#twothirdsplitsContainerOne img
+			{
+				position: relative;
+				width: 50%;
+				left: -95%;
+				margin-bottom: 20%;
+			}
+			#twothirdsplitsContainerTwo
+			{
+				width: 33.333%;
+				border-right: 2px solid #202020;
+			}
+			#twothirdsplitsContainerTwo h1
+			{
+				top: 7%;
+				left: 50%;
+				transform: translate3d(-50%,-50%,0);
+			}
+			#twothirdsplitsContainerTwo p
+			{
+				width: 80%;
+				left: 10%;
+				top: 12%;
+			}
+			.member img
+			{
+				position: absolute;
+				width: 25%;
+			}
+			.member h2
+			{
+				position: absolute;
+				font-size: 17px;
+				font-family: giveny;
+				text-align: center;
+			}
+			#Rod1, #Rod2, #Artist h2, #Engineer h2
+			{
+				bottom: 30%;
+			}
+			#Rod3,#Rod4, #CEO h2, #Salesman h2
+			{
+				bottom: 5%;
+			}
+			#Rod1, #Rod3, #CEO h2, #Engineer h2
+			{
+				left: 27.5%;
+			}
+			#Rod2,#Rod4, #Artist h2, #Salesman h2
+			{
+				right: 27.5%;
+			}
+			#Engineer h2, #CEO h2{transform: translate3d(-50%,150%,0);}
+			#Artist h2, #Salesman h2{transform: translate3d(50%,150%,0);}
+			#Rod1, #Rod3{transform: translateX(-50%);}
+			#Rod2, #Rod4{transform: translateX(50%);}

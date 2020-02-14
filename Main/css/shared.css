@@ -1,0 +1,181 @@
+/*Font Faces*/
+	@font-face {
+	    font-family: 'titilliumXL';
+	    src: url('../fonts/titilliumweb-extralight-webfont.woff2') format('woff2'),
+	         url('../fonts/titilliumweb-extralight-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;}
+	@font-face {
+	    font-family: 'titilliumXLI';
+	    src: url('../fonts/titilliumweb-extralightitalic-webfont.woff2') format('woff2'),
+	         url('../fonts/titilliumweb-extralightitalic-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;}
+	@font-face {
+	    font-family: 'titilliumL';
+	    src: url('../fonts/titilliumweb-light-webfont.woff2') format('woff2'),
+	         url('../fonts/titilliumweb-light-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;}
+	@font-face {
+	    font-family: 'titilliumR';
+	    src: url('../fonts/titilliumweb-regular-webfont.woff2') format('woff2'),
+	         url('../fonts/titilliumweb-regular-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;}
+	@font-face {
+	    font-family: 'coldiac';
+	    src: url('../fonts/coldiac-webfont.woff2') format('woff2'),
+	         url('../fonts/coldiac-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;}
+	@font-face {
+	    font-family: 'giveny';
+	    src: url('../fonts/giveny-webfont.woff2') format('woff2'),
+	         url('../fonts/giveny-webfont.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;}
+
+/*Animations*/
+	@keyframes lds-dual-ring 
+	{
+	  0% {transform: rotate(0deg);}
+	  100% {transform: rotate(360deg);}
+	}
+
+	@keyframes scrollArrowHover 
+	{
+	    from {bottom: 2vh;}
+	    50% {bottom: 4vh;}
+	    to {bottom: 2vh;}
+	}
+
+	@keyframes RightSlideArrowHover 
+	{
+	    from {right: 2vh;}
+	    50% {right: 4vh;}
+	    to {right: 2vh;}
+	}
+
+	@keyframes LeftSlideArrowHover 
+	{
+	    from {left: 2vh;}
+	    50% {left: 4vh;}
+	    to {left: 2vh;}
+	}
+
+		button {
+	    display: inline-block;
+	    border: none;
+	    margin: 0;
+	    text-decoration: none;
+	    cursor: pointer;
+	    text-align: center;
+	    outline: none;
+
+	    -webkit-appearance: none;
+	    -moz-appearance: none;
+	}
+
+/*Loadup*/
+	.lds-dual-ring 
+	{
+	  position: fixed;
+	  transform: translate3d(-50%,-50%,0);
+	  left: 50%;
+	  top: 50%;
+	  display: inline-block;
+	  width: 3vw;
+	  height: 3vw;
+
+	  transition: opacity 0.75s;
+	}
+	.lds-dual-ring:after {
+	  content: " ";
+	  display: block;
+	  width: 3vw;
+	  height: 3vw;
+	  border-radius: 50%;
+	  border: 0.6vw solid #fff;
+	  border-color: #202020e0 transparent #202020e0 transparent;
+	  animation: lds-dual-ring 1.2s linear infinite;
+	}
+
+#header
+{
+	left: 0;
+	width: 100%;
+	height: 12vh;
+	background-color: #202020;
+	z-index: 1;
+}
+#oculos
+{
+	position: absolute;
+	transform: 	translate3d(-50%,-50%,0);
+	top: 5.5vh;
+	left: 50vw;
+	height: 12vh;
+	z-index: 1;
+}
+.socialmediaicons
+{
+	position: absolute;
+	z-index: 1;
+	height: 6vh;
+	top: 6vh;
+	transform: translate3d(50%,-50%,0);
+}
+#twittericon
+{
+	left: 0;
+}
+#igicon
+{
+	left: 9vh;
+}
+.stickyHeader
+{
+	position: fixed;
+	/*top: 0;*/
+}
+.absoluteHeader
+{
+	position: absolute;
+	/*top: 176vh;*/
+}
+.staticHeader
+{
+	position: static;
+}
+body
+{
+	margin: 0;
+	overflow-x: hidden;
+
+	background-color: #eeeeee;
+
+	font-size: 0;
+}
+
+.buttonBW{
+	margin-top: 6vh;
+	text-align: center;
+	position: relative;
+	font-family: coldiac;
+	padding: 2vh 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 20%;
+	background-color: #eeeeee;
+	color: #202020;
+
+	transition: background-color 150ms ease-in-out,
+		color 150ms ease-in-out;
+}
+
+.buttonBW:hover 
+{
+	background-color: #202020;
+	color: white;	
+}
