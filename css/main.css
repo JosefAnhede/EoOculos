@@ -96,12 +96,12 @@
 		/*Pictures*/
 			#page2
 			{
-				background: url(../media/OgaWideBlue.png) no-repeat right top; 
+				background: url(../media/OgaWideBlue.png) no-repeat right top;
 				background-size: cover;
 			}
 			#page1
 			{
-				background: url(../media/OgaWideRed.png) no-repeat left top; 
+				background: url(../media/OgaWideRed.png) no-repeat left top;
 				background-size: cover;
 			}
 	#scrollArrow
@@ -149,7 +149,7 @@
 	{
 		position: relative;
 		background-color: #202020;
-		height: 88vh;
+		height: 89vh;
 		width: 100%;
 	}
 	#secondPageContainer button
@@ -264,7 +264,7 @@
 					transform: translate3d(-50%,-100%,0);
 				}
 				.thirdsplit p
-				{	
+				{
 					top: 12%;
 					width: 80%;
 					left: 10%;
